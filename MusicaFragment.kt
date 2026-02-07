@@ -292,7 +292,6 @@ class MusicaFragment : Fragment(), OnSongClickListener, OnSongLongClickListener 
     }
 
     // PRUEBA: ca-app-pub-3940256099942544/2247696110
-    // REAL: ca-app-pub-2698591014902582/4778167384
     private fun insertAdsAndSetupAdapter() {
         combinedList.clear()
         songsList.forEach { combinedList.add(ListItem.SongItem(it)) }
@@ -305,7 +304,7 @@ class MusicaFragment : Fragment(), OnSongClickListener, OnSongLongClickListener 
         }
 
 
-        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-2698591014902582/4778167384")
+        val adLoader = AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
             .forNativeAd { nativeAd ->
                 loadedNativeAd?.destroy()
                 loadedNativeAd = nativeAd
@@ -491,4 +490,5 @@ class MusicaFragment : Fragment(), OnSongClickListener, OnSongLongClickListener 
             exitMultiSelectMode()
         }
     }
+
 }
